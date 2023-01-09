@@ -1,0 +1,31 @@
+.work-item-title-view {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    img {
+        width: 14px;
+        min-width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+
+    .work-item-id {
+        margin-right: 5px;
+        color: #666;
+    }
+
+    .title-link {
+        flex: 1;
+        @include TextOverflowEllipsis();
+
+        a {
+            color: #333333;
+
+            &:hover {
+                color: #0078d7;
+                text-decoration: underline;
+            }
+        }
+    }
+}

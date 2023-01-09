@@ -1,0 +1,25 @@
+@import "base";
+
+#ext-container {
+    padding: 2px 15px 2px 1px !important;
+
+    .multi-value-control {
+        .suggestions-list {
+            border: 1px solid #eaeaea;
+
+            .ms-Suggestions-container {
+                max-height: 200px; /* max 5 visible elements in the list */
+            }
+        }
+
+        .ms-BasePicker-text {
+            border: 1px solid #eaeaea;
+        }
+
+        &.borderless {
+            .ms-BasePicker-text {
+                border: 1px solid transparent;
+            }
+        }
+    }
+}

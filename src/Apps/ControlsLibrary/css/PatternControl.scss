@@ -1,0 +1,22 @@
+@import "base";
+
+#ext-container {
+    .pattern-control {
+        .ms-TextField-fieldGroup {
+            height: 24px;
+            border-color: #eaeaea;
+        }
+
+        &.invalid {
+            .ms-TextField-fieldGroup {
+                border-color: #da0a00;
+            }
+        }
+
+        input {
+            margin: 0;
+            padding: 2px;
+            @include TextOverflowEllipsis();
+        }
+    }
+}

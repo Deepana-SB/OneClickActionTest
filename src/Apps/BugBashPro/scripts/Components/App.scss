@@ -1,0 +1,41 @@
+#ext-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+
+    .fabric-container {
+        height: 100%;
+
+        .changelog-message {
+            background-color: #dff6dd;
+        }
+    }
+}
+
+@include scrollbars(11px, 2px);
+
+.bugbash-badge {
+    position: fixed;
+    top: 7px;
+    right: 0;
+    z-index: 2000;
+    background: #fff;
+    width: 350px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.bugbash-badge-callout {
+    padding: 8px 14px 2px;
+
+    .badge-callout-header {
+        margin-bottom: 10px;
+        font-size: 21px;
+        font-weight: 100;
+        color: #333333;
+        font-weight: 500;
+    }
+}

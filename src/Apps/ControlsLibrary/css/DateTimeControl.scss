@@ -1,0 +1,86 @@
+@import "base";
+
+#ext-container {
+    padding: 2px 15px 2px 1px !important;
+
+    .date-time-control {
+        .date-time-picker-input-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #eaeaea;
+
+            .date-time-picker-icon {
+                margin: 0;
+                padding: 0;
+                width: 24px;
+                height: 24px;
+
+                &.clear-icon {
+                    color: #e81123;
+                    margin: 0 5px;
+                }
+            }
+
+            &.borderless {
+                border: 1px solid transparent;
+
+                .date-time-picker-icon {
+                    display: none;
+                }
+            }
+
+            .date-time-picker-input {
+                flex: 1;
+                margin: 0;
+                padding: 2px;
+                box-sizing: border-box;
+                height: 24px;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                @include TextOverflowEllipsis();
+
+                &::-ms-clear {
+                    display: none;
+                }
+            }
+        }
+
+        .arrow-box {
+            float: right;
+            position: relative;
+            margin-top: 12px;
+            background: #fff;
+
+            &:after,
+            &:before {
+                bottom: calc(100% - 1px);
+                left: calc(100% - 20px);
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            &:after {
+                border-color: rgba(255, 255, 255, 0);
+                border-bottom-color: #fff;
+                border-width: 9px;
+                margin-left: -9px;
+            }
+
+            &:before {
+                border-color: rgba(234, 234, 234, 0);
+                border-bottom-color: #eaeaea;
+                border-width: 11px;
+                margin-left: -11px;
+            }
+
+            .date-time-picker {
+                border: 1px solid #eaeaea;
+            }
+        }
+    }
+}

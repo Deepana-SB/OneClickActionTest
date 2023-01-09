@@ -1,0 +1,104 @@
+.rich-editor-container {
+    display: flex;
+    flex-direction: column;
+
+    &.fullscreen {
+        background: white;
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        padding: 10px !important;
+        box-sizing: border-box;
+        margin: 0 !important;
+        z-index: 99999;
+
+        .rich-editor {
+            min-height: initial !important;
+            max-height: initial !important;
+        }
+    }
+
+    .info-label.rich-editor-label {
+        margin-bottom: 5px;
+    }
+
+    .input-error.rich-editor-error {
+        margin-top: 5px;
+    }
+
+    .progress-bar {
+        height: 4px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+
+        &:before {
+            display: block;
+            position: absolute;
+            content: "";
+            left: -200px;
+            width: 200px;
+            height: 4px;
+            background-color: #ffd3ad;
+            animation: loading 2s linear infinite;
+        }
+    }
+
+    @keyframes loading {
+        from {
+            left: -200px;
+            width: 30%;
+        }
+        50% {
+            width: 30%;
+        }
+        70% {
+            width: 70%;
+        }
+        80% {
+            left: 50%;
+        }
+        95% {
+            left: 120%;
+        }
+        to {
+            left: 100%;
+        }
+    }
+
+    .rich-editor {
+        flex: 1;
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #a6a6a6;
+        outline: none;
+        padding: 5px;
+        overflow: auto;
+        word-wrap: break-word;
+
+        &:hover {
+            border-color: #212121;
+        }
+
+        &:focus {
+            border-color: #0078d7;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: #007acc;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 400px;
+            width: auto;
+        }
+    }
+}
